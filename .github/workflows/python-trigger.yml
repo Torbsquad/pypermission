@@ -24,7 +24,6 @@ jobs:
         
     - name: execute python script
       env:
-        SECRET: ${{ secrets.TEST1 }}
-        TOKEN: ${{ secrets.PERM_TOKEN }}
+        TOKEN: ${{ secrets.TOKEN }}
       run: python test.py
       
