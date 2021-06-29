@@ -98,8 +98,7 @@ def get_userrights_from_repogroup(repogroup, usergroups):
         for assigned_usergroup in repogroup["assigned-user-groups"]:
             assigned_usergroup_name = list(assigned_usergroup.keys())[0]
             assigned_usergroup_permission = list(assigned_usergroup.values())[0]
-            if usergroup == assigned_usergroup_name:
-
+            if usergroup == assigned_usergroup_name and type(users) != "NoneType":
                 for user in users:
                     if user not in userpermission:
                         userpermission[user] = assigned_usergroup_permission
