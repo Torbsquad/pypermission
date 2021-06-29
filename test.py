@@ -8,12 +8,12 @@ from yaml.loader import SafeLoader
 #print(github_lib.put_permission("chris-robert", os.environ["TOKEN"], "volkswagen-onehub-services", "vwg.ngwsa.github-issues-test", "permissiondummy", "pull"))
 
 is_dryrun = github_lib.get_dryrun_status('test_config.yml')
+org = github_lib.get_org('test_config.yml')
 target_permissions = github_lib.list_config_repo_permissions('test_config.yml')
 
 for repo, target_permission in target_permissions.items():
   print(f"repository: {repo}")
   print(f"target: {target_permission}")
-  org = "volkswagen-onehub-services"
   collaborators = github_lib.list_repository_collaborators("chris-robert", os.environ["TOKEN"], org, repo, "outside")
   
   if "message" in collaborators:
