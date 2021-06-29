@@ -4,10 +4,10 @@
 # admin - can pull, push and administer this repository.
 
 dryrun: False
-
+org: Torbsquad
+    
 repository-groups:
   - repository-group: tqa-repositories
-    org: Torbsquad
     assigned-user-groups:
       - test-users: "push"
       - test-users2: "pull"
@@ -15,7 +15,6 @@ repository-groups:
     repositories:
       - pypermission
   - repository-group: not-tqa-repositories
-    org: Torbsquad
     assigned-user-groups:
       - test-users: "pull"
       - test-users2: "pull"
