@@ -7,7 +7,7 @@ dryrun: False
 
 repository-groups:
   - repository-group: tqa-repositories
-    org: volkswagen-onehub-services
+    org: Torbsquad
     assigned-user-groups:
       - test-users: "push"
       - test-users2: "pull"
@@ -15,7 +15,7 @@ repository-groups:
     repositories:
       - pypermission
   - repository-group: not-tqa-repositories
-    org: volkswagen-onehub-services
+    org: Torbsquad
     assigned-user-groups:
       - test-users: "pull"
       - test-users2: "pull"
