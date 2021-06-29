@@ -24,11 +24,11 @@ repository-groups:
 
 user-groups:
   - test-users:
-    - permissiondummy
-    - permissiondummy
+    #- permissiondummy
+    #- permissiondummy
   - test-users2:
-    - permissiondummy
-    - permissiondummy
-    - permissiondummy
+    #- permissiondummy
+    #- permissiondummy
+    #- permissiondummy
   - test-users3:
-    - permissiondummy
+    #- permissiondummy
