@@ -13,8 +13,7 @@ repository-groups:
       - test-users2: "pull"
       - test-users3: "pull"
     repositories:
-      #- vwg.ngwsa.github-actions-test
-      - vwg.ngwsa.github-issues-test
+      - pypermission
   - repository-group: not-tqa-repositories
     org: volkswagen-onehub-services
     assigned-user-groups:
@@ -22,8 +21,7 @@ repository-groups:
       - test-users2: "pull"
       - test-users3: "pull"
     repositories:
-      #- vwg.ngwsa.github-actions-test
-      - vwg.ngwsa.github-issues-test
+      - pypermission
 
 user-groups:
   - test-users:
