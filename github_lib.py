@@ -62,6 +62,11 @@ def get_dryrun_status(file):
         config = yaml.load(f, Loader=SafeLoader)
         return config["dryrun"]
 
+def get_org(file):
+    with open(file) as f:
+        config = yaml.load(f, Loader=SafeLoader)
+        return config["org"]
+
 
 
 def invite_collaborator(user, token, org, repo, target_user, new_permission):
