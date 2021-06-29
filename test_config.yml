@@ -24,7 +24,7 @@ repository-groups:
 
 user-groups:
   - test-users:
-    #- permissiondummy
+    - permissiondummy2
     #- permissiondummy
   - test-users2:
     #- permissiondummy
