@@ -18,8 +18,6 @@ for repo, target_permission in target_permissions.items():
     
   existing_users = {}
   for coll in collaborators:
-    print("coll:")
-    print(coll)
     user = coll["login"]
     if coll["permissions"]["pull"]:
       existing_users[user] = "pull"
