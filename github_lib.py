@@ -32,6 +32,8 @@ def list_repository_collaborators(user, token, org, repo, affiliation='all'):
         print(response.status_code)
         
         if response.status_code == 404:
+            print(response.text)
+            print(response.message)
             raise Exception(response)
         
         response_json = response.json()
