@@ -3,7 +3,7 @@
 # push - can pull and push, but not administer this repository.
 # admin - can pull, push and administer this repository.
 
-dryrun: True
+dryrun: False
 org: Torbsquad
     
 repository-groups:
@@ -24,7 +24,7 @@ repository-groups:
 
 user-groups:
   - test-users:
-    - permissiondummy2
+    - permissiondummy
     #- permissiondummy
   - test-users2:
     #- permissiondummy
