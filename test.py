@@ -16,6 +16,7 @@ for repo, target_permission in target_permissions.items():
   org = "volkswagen-onehub-services"
   collaborators = github_lib.list_repository_collaborators("chris-robert", os.environ["TOKEN"], org, repo, "outside")
   existing_users = {}
+  print(collaborators)
   for coll in collaborators:
     user = coll["login"]
     if coll["permissions"]["pull"]:
