@@ -30,8 +30,8 @@ def list_repository_collaborators(user, token, org, repo, affiliation='all'):
         )
         
         if response.status_code != 200:
-            print(f"A Resource has not been found:\n{response.text}")
-            print(f"make sure that the organisation and repository exists: {org}, {repo}")
+            print(f"Error: {response.text}")
+            print(f"(org:{org}, repo:{repo})")
             raise Exception(response)
         
         response_json = response.json()
