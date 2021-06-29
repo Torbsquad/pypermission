@@ -29,11 +29,8 @@ def list_repository_collaborators(user, token, org, repo, affiliation='all'):
             auth=(user, token)
         )
         
-        print(response.status_code)
-        
         if response.status_code == 404:
-            print(response.text)
-            print(response.message)
+            print(f"A Resource has not been found:\n {response.text}")
             raise Exception(response)
         
         response_json = response.json()
