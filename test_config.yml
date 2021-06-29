@@ -3,13 +3,13 @@
 # push - can pull and push, but not administer this repository.
 # admin - can pull, push and administer this repository.
 
-dryrun: False
+dryrun: True
 org: Torbsquad
     
 repository-groups:
   - repository-group: tqa-repositories
     assigned-user-groups:
-      - test-users: "pull"
+      - test-users: "push"
       - test-users2: "pull"
       - test-users3: "pull"
     repositories:
