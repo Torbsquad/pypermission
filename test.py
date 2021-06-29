@@ -15,10 +15,12 @@ for repo, target_permission in target_permissions.items():
   print(f"target: {target_permission}")
   org = "volkswagen-onehub-services"
   collaborators = github_lib.list_repository_collaborators("chris-robert", os.environ["TOKEN"], org, repo, "outside")
+  
+  if "message" in collaborators:
+    print(collaborators)
+    exit()
+  
   existing_users = {}
-  print("collaborators: ↓")
-  print(collaborators)
-  print("collaborators: ↑")
   for coll in collaborators:
     print("coll:")
     print(coll)
