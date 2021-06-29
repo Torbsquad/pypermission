@@ -28,7 +28,9 @@ def list_repository_collaborators(user, token, org, repo, affiliation='all'):
             },
             auth=(user, token)
         )
-
+        
+        print(response)
+        
         response_json = response.json()
         return_var += response_json
         response_len = len(response_json)
