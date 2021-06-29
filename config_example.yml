@@ -1,1 +1,37 @@
-dryrun: false
+# permission levels:
+# pull - can pull, but not push to or administer this repository.
+# push - can pull and push, but not administer this repository.
+# admin - can pull, push and administer this repository.
+
+dryrun: False
+
+repository-groups:
+  - repository-group: tqa-repositories
+    org: volkswagen-onehub-services
+    assigned-user-groups:
+      - test-users: "push"
+      - test-users2: "pull"
+      - test-users3: "pull"
+    repositories:
+      #- vwg.ngwsa.github-actions-test
+      - vwg.ngwsa.github-issues-test
+  - repository-group: not-tqa-repositories
+    org: volkswagen-onehub-services
+    assigned-user-groups:
+      - test-users: "pull"
+      - test-users2: "pull"
+      - test-users3: "pull"
+    repositories:
+      #- vwg.ngwsa.github-actions-test
+      - vwg.ngwsa.github-issues-test
+
+user-groups:
+  - test-users:
+    - permissiondummy
+    - permissiondummy
+  - test-users2:
+    - permissiondummy
+    - permissiondummy
+    - permissiondummy
+  - test-users3:
+    - permissiondummy
