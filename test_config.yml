@@ -9,7 +9,7 @@ org: Torbsquad
 repository-groups:
   - repository-group: tqa-repositories
     assigned-user-groups:
-      - test-users: "push"
+      - test-users: "pull"
       - test-users2: "pull"
       - test-users3: "pull"
     repositories:
