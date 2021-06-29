@@ -46,7 +46,11 @@ for repo, target_permission in target_permissions.items():
           
   for existing_user in existing_users.keys():
     if existing_user not in list(target_permission.keys()):
-      print(f"DRYRUN: '{repo}' does not need '{existing_user}', script would have removed '{existing_user}'")
+      if is_dryrun:
+        print(f"DRYRUN: '{repo}' does not need '{existing_user}', script would have removed '{existing_user}'")
+      else:
+        github_lib.remove_collaborator("chris-robert", os.environ["TOKEN"], org, repo, target_user)
+        
         
   '''
      elif existing_users not in target_user:
